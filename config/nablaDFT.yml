@@ -1,0 +1,47 @@
+train:
+  batch_size: 16
+  seed: 2024
+  epochs: 50
+  num_workers: 8
+  restore_path: null
+  save_path: /home/suqun/model/LumiForce/ckpt/nablaDFT/no_scale
+  log_interval: 50
+  lr: 0.00001
+  factor: 0.9
+  patience: 1
+  min_lr: 0.000001
+  energy_weight: 5
+  force_weight: 95
+  swa_energy_weight: 20
+  swa_force_weight: 95
+  momentum_weight: 0.6
+  charge_weight: 0.01
+  weight_decay: 1e-16
+  calculate_electric: False
+  has_charge: False
+  Hatree2kcal: 627.5094
+
+
+test:
+  test_interval: 1
+  test_batch_size: 16
+  data_path: /home/suqun/data/nablaDFT/test_trace/raw
+  data_name: test_trajectories
+#  data_name: test_2k_conformers_v2_formation_energy_w_forces
+
+
+data:
+  data_path: /home/suqun/data/nablaDFT/full/raw
+  data_name: full
+#  data_path: /home/suqun/data/nablaDFT/tiny/train
+#  data_name: train_2k_v2_formation_energy_w_forces
+
+
+model:
+  name: LumiForce
+  num_layers: 6
+
+
+
+
+

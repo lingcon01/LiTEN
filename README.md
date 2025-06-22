@@ -86,5 +86,124 @@ python scripts/train_chignolin.py \
     --molecule chignolin \
     --device cuda
 ```
+## ⚙️ Utilities Based on LiTEN-FF
+
+We provide a suite of practical utilities built upon the pretrained LiTEN-FF model for downstream molecular simulation tasks, including **geometry optimization**, **molecular dynamics**, and **batch conformer generation**. These scripts are based on [ASE (Atomic Simulation Environment)](https://wiki.fysik.dtu.dk/ase/) and can be easily adapted to custom molecules and workflows.
+
+---
+
+### 🧬 ASE-OPT: Geometry Optimization
+
+**Function**:
+Performs energy minimization of molecules using LiTEN-FF as a force field backend via ASE's `BFGS` optimizer or other algorithms.
+
+**Example Usage**:
+
+```bash
+python tools/ase_opt.py \
+    --input path/to/molecule.sdf \
+    --model checkpoint/LiTEN_FF_pretrained.pt \
+    --output optimized.sdf
+```
+
+**Key Features**:
+
+* Supports SDF, XYZ, or PDB input.
+* Compatible with vacuum or solvated structures.
+* Output optimized geometries in the same format.
+
+---
+
+### 🔁 ASE-MD: Molecular Dynamics
+
+**Function**:
+Runs molecular dynamics (MD) simulations under NVE, NVT, or Langevin dynamics using LiTEN-FF as the force provider.
+
+**Example Usage**:
+
+```bash
+python tools/ase_md.py \
+    --input molecule.sdf \
+    --model checkpoint/LiTEN_FF_pretrained.pt \
+    --temperature 300 \
+    --timestep 0.5 \
+    --steps 10000 \
+    --output trajectory.xyz
+```
+
+**Options**:
+
+* `--temperature`: simulation temperature (in Kelvin)
+* `--timestep`: timestep in femtoseconds
+* `--steps`: number of simulation steps
+* `--thermostat`: use `langevin`, `nvt`, or `nve`
+
+---
+
+### 🧩 Batch-confgen: Conformer Generation
+
+**Function**:
+Generates low-energy conformers for multiple molecules using LiTEN-FF with geometry optimization for each initial guess. Suitable for 3D dataset construction and screening.
+
+**Example Usage**:
+
+```bash
+python tools/batch_confgen.py \
+    --input molecules.sdf \
+    --model checkpoint/LiTEN_FF_pretrained.pt \
+    --n_conf 10 \
+    --output conformers.sdf
+```
+
+**Features**:
+
+* Automatically embeds and optimizes 3D structures.
+* Can handle hundreds to thousands of molecules in batch.
+* Parallelized for performance on multicore systems.
+
+---
+
+## 🧪 Requirements
+
+These scripts require the following dependencies:
+
+```bash
+pip install ase rdkit torch numpy tqdm
+```
+
+For GPU acceleration, ensure that PyTorch is installed with CUDA support.
+
+## 🙏 Acknowledgement
+
+This work was supported by **Drug Design and Discovery Laboratory, Zhejiang University**, and inspired by previous developments in equivariant neural networks and deep potential models. We especially acknowledge the creators of **PaiNN**, **MACE**, and **VisNet**, which provided critical insights and technical foundations for our development of LiTEN and LiTEN-FF.
+
+We also thank the maintainers of the [ASE](https://wiki.fysik.dtu.dk/ase/), [RDKit](https://www.rdkit.org/), and [PyTorch Geometric](https://pytorch-geometric.readthedocs.io/) projects for their indispensable tools.
+
+---
+
+## 📖 Citation
+
+If you use **LiTEN** or **LiTEN-FF** in your research or projects, please cite:
+
+```bibtex
+@article{LiTEN2025,
+  title     = {LiTEN: A Foundational Equivariant Neural Potential for Biomolecular Simulations},
+  author    = {Qun su},
+  year      = {2025},
+  url       = {https://github.com/lingcon01/LiTEN}
+}
+```
+
+> 📌 The arXiv link will be updated upon public release of the paper.
+
+---
+
+## 👥 Contributors
+
+* **Qun Su** ([@lingcon01](https://github.com/lingcon01)) – Lead developer, model architecture, training pipeline, downstream benchmarking
+* **Kai Zhu and Jintu Zhang** – downstream benchmarking
+* **Qiaolin Gou** – Optimization scripts, inference utilities, write articles
+
+We welcome contributions from the community. If you'd like to contribute, please feel free to open issues or submit pull requests!
 
 

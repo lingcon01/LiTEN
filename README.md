@@ -5,6 +5,7 @@
 **LiTEN (Learning Interactions with Tensorized Equivariant Networks)** is a novel equivariant neural network designed for high-precision, efficient 3D molecular property prediction. It introduces the **Tensorized Quadrangle Attention (TQA)** mechanism, which operates directly in Cartesian space, enabling accurate modeling of many-body interactions **without relying on spherical harmonics**, leading to significant computational savings.
 
 We further provide **LiTEN-FF**, a **foundation model for biomolecular force fields**, pretrained and fine-tuned to support a wide range of tasks in both **vacuum and solvated environments**.
+![workflow](https://github.com/user-attachments/assets/ffc2d515-a0c0-4a5f-ab85-a9edc284f8f9)
 
 
 ## 🔬 Applications

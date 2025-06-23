@@ -91,7 +91,7 @@ python scripts/train_chignolin.py \
 
 We provide a suite of practical utilities built upon the pretrained LiTEN-FF model for downstream molecular simulation tasks, including **geometry optimization**, **molecular dynamics**, and **batch conformer generation**. These scripts are based on [ASE (Atomic Simulation Environment)](https://wiki.fysik.dtu.dk/ase/) and can be easily adapted to custom molecules and workflows.
 
-Reference: https://github.com/lingcon01/LiTEN-FF/master
+Reference: https://github.com/lingcon01/LiTEN-FF/tree/master
 
 ---
 

@@ -101,10 +101,11 @@ Performs energy minimization of molecules using LiTEN-FF as a force field backen
 **Example Usage**:
 
 ```bash
-python tools/ase_opt.py \
-    --input path/to/molecule.sdf \
-    --model checkpoint/LiTEN_FF_pretrained.pt \
-    --output optimized.sdf
+# You can choose nablaDFT model or SPICE model
+python md_scripts/LiTEN_OPT.py \
+    --model_name nablaDFT
+    --input_file path/to/molecule \
+    --output_file optimized_path
 ```
 
 **Key Features**:
@@ -123,13 +124,13 @@ Runs molecular dynamics (MD) simulations under NVE, NVT, or Langevin dynamics us
 **Example Usage**:
 
 ```bash
-python tools/ase_md.py \
-    --input molecule.sdf \
-    --model checkpoint/LiTEN_FF_pretrained.pt \
+# The SPICE model is compatible with both periodic solvent systems and vacuum-phase systems, whereas the nablaDFT model is limited to vacuum systems only.
+python md_scripts/LiTEN_MD.py \
+    --input_file molecule.xyz \
+    --model_name SPICE
     --temperature 300 \
-    --timestep 0.5 \
-    --steps 10000 \
-    --output trajectory.xyz
+    --timestep 1 \
+    --steps 1000000 \
 ```
 
 **Options**:
@@ -149,11 +150,10 @@ Generates low-energy conformers for multiple molecules using LiTEN-FF with geome
 **Example Usage**:
 
 ```bash
-python tools/batch_confgen.py \
-    --input molecules.sdf \
-    --model checkpoint/LiTEN_FF_pretrained.pt \
-    --n_conf 10 \
-    --output conformers.sdf
+python md_scripts/LiTEN_Confgen.py \
+    --input_dir batch_molecule_path  \
+    --model_name nablaDFT \
+    --output_dir conformers
 ```
 
 **Features**:

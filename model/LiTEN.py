@@ -17,7 +17,7 @@ from model.MBI_blocks.utils import *
 class LiTEN(nn.Module):
 
     def __init__(self, num_heads=8, num_layers=6, hidden_channels=256, num_rbf=32,
-                 cutoff=5.0, max_neighbors=32, max_z=100, vec_norm=True, atomic_inter_scale=None,
+                 cutoff=5.0, max_neighbors=1000, max_z=100, vec_norm=True, atomic_inter_scale=None,
                  atomic_inter_shift=None):
         super(LiTEN, self).__init__()
 

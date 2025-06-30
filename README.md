@@ -190,7 +190,7 @@ If you use **LiTEN** or **LiTEN-FF** in your research or projects, please cite:
 
 ```bibtex
 @article{LiTEN2025,
-  title     = {LiTEN: A Foundational Equivariant Neural Potential for Biomolecular Simulations},
+  title     = {LiTEN: A Scalable and Quantum-Accurate Foundation Model for Biomolecular Force Field via Linearly Tensorized Quadrangle Attention},
   author    = {Qun su},
   year      = {2025},
   url       = {https://github.com/lingcon01/LiTEN}

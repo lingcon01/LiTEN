@@ -78,10 +78,9 @@ class TorchDataset2(Dataset):
         data.z = data.z.to(torch.long)
         data.edge_index = data.edge_index.to(torch.long)
 
-        # 确保pos和dy也被强制转换
-        data.pos = data.pos.to(torch.float)  # pos 通常为 float 类型
-        data.dy = data.dy.to(torch.float)  # dy 通常为 float 类型
-        data.shifts = data.shifts.to(torch.float)  # shifts 也应该是 float 类型
+        data.pos = data.pos.to(torch.float) 
+        data.dy = data.dy.to(torch.float)  
+        data.shifts = data.shifts.to(torch.float) 
 
         return data
 

@@ -16,10 +16,6 @@ class CepDataset(Dataset):
         self.npz_file = os.listdir(self.npz_dir)
 
     def get(self, idx):
-        """
-        根据索引动态读取某个分子（样本）的所有数据。
-        """
-
         np_file = os.path.join(self.npz_dir, self.npz_file[idx])
         np_data = np.load(np_file, allow_pickle=True)
         z = torch.from_numpy(np.array(np_data['symbols']).copy()).long()
@@ -32,10 +28,7 @@ class CepDataset(Dataset):
         return data
 
     def len(self):
-        """
-        返回数据集中的样本数量。
-        """
-        return len(self.npz_file)  # 获取样本数量
+        return len(self.npz_file)
 
 
 def get_split(dataset, train_ra, val_ra):

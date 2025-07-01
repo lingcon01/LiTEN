@@ -98,33 +98,11 @@ class PyGNablaDFT(InMemoryDataset):
 def get_mol(smiles):
 
     mol = Chem.MolFromSmiles(smiles)
-    mol = Chem.AddHs(mol)  # 加入水分子
+    mol = Chem.AddHs(mol)  
 
     formal_charge = Chem.GetFormalCharge(mol)
 
     return torch.tensor(formal_charge, dtype=torch.float)
-
-    # 这里的边类型通常指化学键的类型，例如单键、双键、三键等
-
-    # # 2. 获取分子中每个原子的形式电荷（formal_charge）
-    # formal_charge = []
-    # atomic_numbers= []
-    # for atom in mol.GetAtoms():
-    #     formal_charge.append(atom.GetFormalCharge())
-    #     atomic_numbers.append(atom.GetAtomicNum())
-    #
-    # # 3. 获取分子的edge_index
-    # # edge_index是表示连接关系的索引，一般由两个列表组成，表示每个键的两个原子的索引
-    # edge_index = [[], []]
-    # edge_type = []
-    # for bond in mol.GetBonds():
-    #     start_atom = bond.GetBeginAtomIdx()
-    #     end_atom = bond.GetEndAtomIdx()
-    #     edge_index[0].extend([start_atom])
-    #     edge_index[1].extend([end_atom])
-    #     edge_type.append(bond.GetBondTypeAsDouble())
-
-    # return torch.tensor(edge_type, dtype=torch.long), torch.tensor(formal_charge, dtype=torch.float), torch.tensor(edge_index, dtype=torch.long)
 
 
 def get_mean_std(data_loader):

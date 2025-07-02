@@ -36,7 +36,7 @@ git clone https://github.com/lingcon01/LiTEN.git
 cd LiTEN
 conda create -n liten python=3.10
 conda activate liten
-pip install -r requirements.txt
+pip install -r requirement.txt
 ```
 
 ## 📁 Project Structure

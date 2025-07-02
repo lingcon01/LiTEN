@@ -205,7 +205,7 @@ If you use **LiTEN** or **LiTEN-FF** in your research or projects, please cite:
 
 * **Qun Su** ([@lingcon01](https://github.com/lingcon01)) – Lead developer, model architecture, training pipeline, downstream benchmarking
 * **Kai Zhu and Jintu Zhang** – downstream benchmarking
-* **Qiaolin Gou** – Optimization scripts, inference utilities, write articles
+* **Qiaolin Gou** – inference utilities
 
 We welcome contributions from the community. If you'd like to contribute, please feel free to open issues or submit pull requests!
 

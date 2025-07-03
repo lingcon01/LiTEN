@@ -189,12 +189,15 @@ We also thank the maintainers of the [ASE](https://wiki.fysik.dtu.dk/ase/), [RDK
 If you use **LiTEN** or **LiTEN-FF** in your research or projects, please cite:
 
 ```bibtex
-@article{LiTEN2025,
-  title     = {LiTEN: A Foundational Equivariant Neural Potential for Biomolecular Simulations},
-  author    = {Qun su},
-  year      = {2025},
-  url       = {https://github.com/lingcon01/LiTEN}
+@article{su2025liten,
+  title   = {A Scalable and Quantum-Accurate Foundation Model for Biomolecular Force Field via Linearly Tensorized Quadrangle Attention},
+  author  = {Su, Qun},
+  journal = {arXiv preprint arXiv:2507.00884},
+  year    = {2025},
+  url     = {https://arxiv.org/abs/2507.00884},
+  note    = {Available at \url{https://github.com/lingcon01/LiTEN}}
 }
+
 ```
 
 > 📌 The arXiv link will be updated upon public release of the paper.

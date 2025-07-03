@@ -198,7 +198,7 @@ If you use **LiTEN** or **LiTEN-FF** in your research or projects, please cite:
 ```
 
 > 📌 The arXiv link will be updated upon public release of the paper.
-
+> https://arxiv.org/abs/2507.00884
 ---
 
 ## 👥 Contributors

@@ -121,7 +121,7 @@ python md_scripts/LiTEN_OPT.py \
 ### 🔁 ASE-MD: Molecular Dynamics
 
 **Function**:
-Runs molecular dynamics (MD) simulations under NVE, NVT, or Langevin dynamics using LiTEN-FF as the force provider.
+Runs molecular dynamics (MD) simulations under NVE, NVT, or Langevin dynamics using LiTEN-FF as the force provider.(Please note that the speed comparisons among different force field models in the article were conducted on single molecules. This is because, under periodic aqueous environments, the main computational bottleneck lies in the neighbor list construction, making it difficult to directly compare the intrinsic speed of each model.)
 
 **Example Usage**:
 

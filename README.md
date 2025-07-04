@@ -126,7 +126,7 @@ Runs molecular dynamics (MD) simulations under NVE, NVT, or Langevin dynamics us
 **Example Usage**:
 
 ```bash
-# The SPICE model is compatible with both periodic solvent systems and vacuum-phase systems, whereas the nablaDFT model is limited to vacuum systems only.
+# The SPICE model is compatible with both periodic solvent systems and vacuum-phase systems, whereas the nablaDFT model is limited to vacuum systems only. (Please note that the speed comparisons among different force field models in the article were conducted on single molecules. This is because, under periodic aqueous environments, the main computational bottleneck lies in the neighbor list construction, making it difficult to directly compare the intrinsic speed of each model.)
 python md_scripts/LiTEN_MD.py \
     --input_file molecule.xyz \
     --model_name SPICE

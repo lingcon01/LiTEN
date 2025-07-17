@@ -32,7 +32,7 @@ data:
   molecule: aspirin
   num_train: 950
   num_val: 50
-  num_test: 50
+  num_test: None
 
 
 model:

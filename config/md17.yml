@@ -36,7 +36,7 @@ data:
 
 
 model:
-  name: LumiForce
+  name: LiTEN
   num_layers: 6
   num_heads: 8
   hidden_channels: 256

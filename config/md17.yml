@@ -28,8 +28,8 @@ test:
 
 
 data:
-  base_path: /home/suqun/model/LumiForce/data/md17/npz_data
-  molecule: aspirin
+  base_path: /home/suqun/model/LumiForce/data/rmd17/npz_data
+  molecule: razobenzene
   num_train: 950
   num_val: 50
   num_test: None

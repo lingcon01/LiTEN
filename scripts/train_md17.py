@@ -29,7 +29,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description='MD17 Training Script')
     parser.add_argument('--config_path', type=str, default='/home/suqun/model/LiTEN/config/md17.yml',
                         help='Path to config yaml file.')
-    parser.add_argument('--molecule', type=str, default='aspirin', help='Molecule dataset to use.')
+    parser.add_argument('--molecule', type=str, default='razobenzene', help='Molecule dataset to use.')
     parser.add_argument('--restore_path', type=str, default='', help='Checkpoint restore path.')
     parser.add_argument('--save_path', type=str, default='/home/suqun/model/LiTEN/ckpt',
                         help='Checkpoint save directory.')

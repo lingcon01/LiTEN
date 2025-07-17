@@ -64,7 +64,7 @@ The following script demonstrates how to evaluate **LiTEN-FF** on the SPICE data
 python scripts/train_rmd17.py \
     --config_path ./config/md17.yml \
     --save_path ./ckpt \
-    --molecule asiprin \
+    --molecule razobenzene \
     --num_train 950 \
     --num_val 50 \
     --device cuda

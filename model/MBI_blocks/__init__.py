@@ -1,2 +1,2 @@
-from .Interaction import *
+from .TQA import *
 from .utils import *

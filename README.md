@@ -107,7 +107,7 @@ Performs energy minimization of molecules using LiTEN-FF as a force field backen
 python md_scripts/LiTEN_OPT.py \
     --model_name nablaDFT
     --input_file example/dipe.xyz \
-    --output_file optimized_path
+    --output_file example
 ```
 
 **Key Features**:
@@ -155,7 +155,7 @@ Generates low-energy conformers for multiple molecules using LiTEN-FF with geome
 python md_scripts/LiTEN_Confgen.py \
     --input_dir example/under_25  \
     --model_name nablaDFT \
-    --output_dir conformers
+    --output_dir example
 ```
 
 **Features**:

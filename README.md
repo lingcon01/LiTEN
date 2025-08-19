@@ -106,7 +106,7 @@ Performs energy minimization of molecules using LiTEN-FF as a force field backen
 # You can choose nablaDFT model or SPICE model
 python md_scripts/LiTEN_OPT.py \
     --model_name nablaDFT
-    --input_file path/to/molecule \
+    --input_file example/dipe.xyz \
     --output_file optimized_path
 ```
 
@@ -121,14 +121,14 @@ python md_scripts/LiTEN_OPT.py \
 ### 🔁 ASE-MD: Molecular Dynamics
 
 **Function**:
-Runs molecular dynamics (MD) simulations under NVE, NVT, or Langevin dynamics using LiTEN-FF as the force provider.(Please note that the speed comparisons among different force field models in the article were conducted on single molecules. This is because, under periodic aqueous environments, the main computational bottleneck lies in the neighbor list construction, making it difficult to directly compare the intrinsic speed of each model.)
+Runs molecular dynamics (MD) simulations under NVE, NVT, or Langevin dynamics using LiTEN-FF as the force provider. (Please note that the speed comparisons among different force field models in the article were conducted on single molecules. This is because, under periodic aqueous environments, the main computational bottleneck lies in the neighbor list construction, making it difficult to directly compare the intrinsic speed of each model.)
 
 **Example Usage**:
 
 ```bash
-# The SPICE model is compatible with both periodic solvent systems and vacuum-phase systems, whereas the nablaDFT model is limited to vacuum systems only. 
+# The SPICE model is compatible with both periodic solvent systems and vacuum-phase systems, whereas the nablaDFT model is limited to vacuum systems only.
 python md_scripts/LiTEN_MD.py \
-    --input_file molecule.xyz \
+    --input_file example/dipe.xyz \
     --model_name SPICE
     --temperature 300 \
     --timestep 1 \
@@ -153,7 +153,7 @@ Generates low-energy conformers for multiple molecules using LiTEN-FF with geome
 
 ```bash
 python md_scripts/LiTEN_Confgen.py \
-    --input_dir batch_molecule_path  \
+    --input_dir example/under_25  \
     --model_name nablaDFT \
     --output_dir conformers
 ```
@@ -208,7 +208,8 @@ If you use **LiTEN** or **LiTEN-FF** in your research or projects, please cite:
 
 * **Qun Su** ([@lingcon01](https://github.com/lingcon01)) – Lead developer, model architecture, training pipeline, downstream benchmarking
 * **Kai Zhu and Jintu Zhang** – downstream benchmarking
-* **Qiaolin Gou** – Inference utilities
+* **Qiaolin Gou** – inference utilities
 
 We welcome contributions from the community. If you'd like to contribute, please feel free to open issues or submit pull requests!
+
 

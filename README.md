@@ -105,7 +105,7 @@ Performs energy minimization of molecules using LiTEN-FF as a force field backen
 ```bash
 # You can choose nablaDFT model or SPICE model
 python md_scripts/LiTEN_OPT.py \
-    --model_name nablaDFT
+    --model_name nablaDFT  \
     --input_file example/dipe.xyz \
     --output_file example/dipe_opt.xyz
 ```
@@ -129,7 +129,7 @@ Runs molecular dynamics (MD) simulations under NVE, NVT, or Langevin dynamics us
 # The SPICE model is compatible with both periodic solvent systems and vacuum-phase systems, whereas the nablaDFT model is limited to vacuum systems only.
 python md_scripts/LiTEN_MD.py \
     --input_file example/dipe.xyz \
-    --model_name SPICE
+    --model_name SPICE  \
     --temperature 300 \
     --timestep 1 \
     --steps 1000000 \

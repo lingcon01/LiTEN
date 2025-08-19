@@ -53,7 +53,7 @@ LiTEN/
 
 ## 📊 Reproduce Our Results
 
-To reproduce the benchmark results reported in our paper (on datasets such as **rMD17**, **MD22**, **Chignolin**), we provide train scripts in the) directory.
+To reproduce the benchmark results reported in our paper (on datasets such as **rMD17**, **MD22**, **Chignolin**), we provide train scripts in the) directory. Please download the dataset from the URL provided in our paper and update the dataset path in the scripts accordingly.
 
 ### 🧪 Benchmark Evaluation Example
 
@@ -74,7 +74,7 @@ python scripts/train_md17.py \
 python scripts/train_md22.py \
     --config_path ./config/md22.yml \
     --save_path ./ckpt \
-    --molecule AT_AT \
+    --molecule md22_AT_AT \
     --num_train 2500 \
     --num_val 500 \
     --device cuda

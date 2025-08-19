@@ -53,7 +53,7 @@ LiTEN/
 
 ## 📊 Reproduce Our Results
 
-To reproduce the benchmark results reported in our paper (on datasets such as **rMD17**, **MD22**, **Chignolin**), we provide train scripts in the) directory.
+To reproduce the benchmark results reported in our paper (on datasets such as **rMD17**, **MD22**, **Chignolin**), we provide train scripts in the) directory. Please download the dataset from the URL provided in our paper and update the dataset path in the scripts accordingly.
 
 ### 🧪 Benchmark Evaluation Example
 

@@ -61,7 +61,7 @@ The following script demonstrates how to evaluate **LiTEN-FF** on the SPICE data
 
 ```bash
 # Examples: train and test on rmd17. (unit: meV and meV/A)
-python scripts/train_rmd17.py \
+python scripts/train_md17.py \
     --config_path ./config/md17.yml \
     --save_path ./ckpt \
     --molecule razobenzene \

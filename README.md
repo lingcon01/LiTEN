@@ -31,13 +31,43 @@ In upcoming versions of LiTEN-FF, we aim to:
 
 ## 📦 Installation
 
+You can set up the **LiTEN** environment in one of the following ways.
+
+### 🧠 **Option 1. Create from `environment.yml` (Recommended)**
+
+This is the standard and most reproducible way to install all dependencies.
+
 ```bash
+# 1. Clone the repository
 git clone https://github.com/lingcon01/LiTEN.git
 cd LiTEN
-conda create -n liten python=3.10
+
+# 2. Create and activate the conda environment
+conda env create -f environment.yml
 conda activate liten
-pip install -r requirement.txt
 ```
+
+### ⚡ **Option 2. Restore from pre-packed environment (`liten_env.tar.gz`)**
+
+You can download the pre-packed conda environment from [Zenodo](https://zenodo.org/records/17149388) and restore it manually under your conda environments directory to ensure full reproducibility and consistency across different systems.
+
+```bash
+# 1. Locate your conda environments path
+# (Usually: ~/miniconda3/envs or ~/anaconda3/envs)
+cd ~/miniconda3/envs
+
+# 2. Create a new directory for the environment
+mkdir liten
+cd liten
+
+# 3. Extract the environment archive into this directory
+tar -xzf /path/to/liten_env.tar.gz
+
+# 4. Activate the restored environment
+conda activate ~/miniconda3/envs/liten
+```
+> 🧩 This method avoids dependency resolution and ensures bitwise reproducibility of the LiTEN environment.
+
 
 ## 📁 Project Structure
 
@@ -53,18 +83,17 @@ LiTEN/
 
 ## 📊 Reproduce Our Results
 
-To reproduce the benchmark results reported in our paper (on datasets such as **rMD17**, **MD22**, **Chignolin**), we provide train scripts in the) directory. Please download the dataset from the URL provided in our paper and update the dataset path in the scripts accordingly.
+To reproduce the benchmark results reported in our paper (on datasets such as **rMD17**, **MD22**, and **Chignolin**), we provide the corresponding training scripts in the repository.
+Please download the datasets from [Zenodo](https://zenodo.org/records/17142012), create a `data` directory under the `LiTEN` root folder, and extract all files into this directory.
 
 ### 🧪 Benchmark Evaluation Example
 
-The following script demonstrates how to evaluate **LiTEN-FF** on the SPICE dataset using a provided pretrained checkpoint:
-
 ```bash
 # Examples: train and test on rmd17. (unit: meV and meV/A)
-python scripts/train_md17.py \
+python scripts/train_rmd17.py \
     --config_path ./config/md17.yml \
     --save_path ./ckpt \
-    --molecule razobenzene \
+    --molecule raspirin \
     --num_train 950 \
     --num_val 50 \
     --device cuda

@@ -1,0 +1,52 @@
+train:
+  batch_size: 4
+  seed: 2024
+  epochs: 1000
+  num_workers: 0
+  restore_path: False
+  save_path: None
+  log_interval: 1000
+  lr: 0.0002
+  factor: 0.9
+  patience: 10
+  min_lr: 0.000001
+  energy_weight: 1
+  force_weight: 99
+  swa_energy_weight: 10
+  swa_force_weight: 99
+  momentum_weight: 100
+  weight_decay: 1e-16
+  kcal2mev: 43.36454
+  calculate_electric: False
+  has_charge: False
+  charge_weight: 10
+  edge_weight: 100
+
+test:
+  test_interval: 1
+  test_batch_size: 8
+
+
+data:
+  base_path: null
+  molecule: null
+  num_train: 7634
+  num_val: 954
+  num_test: None
+
+model:
+  name: LiTEN
+  num_layers: 6
+  num_heads: 8
+  hidden_channels: 256
+  num_rbf: 32
+  cutoff: 4.0
+  max_neighbors: 32
+  max_z: 100
+  vec_norm: True
+
+
+
+
+
+

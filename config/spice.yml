@@ -1,0 +1,36 @@
+train:
+  batch_size: 2
+  seed: 2024
+  epochs: 100
+  num_workers: 0
+  restore_path: null
+  save_path: /home/suqun/model/LumiForce/ckpt/spice/finetune
+  log_interval: 50
+  lr: 0.00003
+  factor: 0.9
+  patience: 3
+  min_lr: 0.000001
+  energy_weight: 1
+  force_weight: 100
+  swa_energy_weight: 0.5
+  swa_force_weight: 100
+  momentum_weight: 0.6
+  charge_weight: 0.01
+  weight_decay: 1e-16
+  calculate_electric: False
+  has_charge: False
+  Hatree2kcal: 627.5094
+
+
+test:
+  test_interval: 1
+  test_batch_size: 4
+  data_path: None
+
+data:
+  split_path: /home/suqun/data/SPICE/split_no_charge.npz
+  data_path: /home/suqun/data/SPICE/SPICE_no_charge.hdf5
+
+model:
+  name: LumiForce
+  num_layers: 6

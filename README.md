@@ -91,8 +91,6 @@ Please download the datasets from [Zenodo](https://zenodo.org/records/17142012),
 ```bash
 # Examples: train and test on rmd17. (unit: meV and meV/A)
 python scripts/train_rmd17.py \
-    --config_path ./config/md17.yml \
-    --save_path ./ckpt \
     --molecule raspirin \
     --num_train 950 \
     --num_val 50 \
@@ -101,8 +99,6 @@ python scripts/train_rmd17.py \
 ```bash
 # Examples: train and test on md22. (unit: meV and meV/A)
 python scripts/train_md22.py \
-    --config_path ./config/md22.yml \
-    --save_path ./ckpt \
     --molecule md22_AT_AT \
     --num_train 2500 \
     --num_val 500 \
@@ -111,8 +107,6 @@ python scripts/train_md22.py \
 ```bash
 # Examples: train and test on chignolin. (unit: kcal/mol and kcal/mol/A)
 python scripts/train_chignolin.py \
-    --config_path ./config/chignolin.yml \
-    --save_path ./ckpt \
     --molecule chignolin \
     --device cuda
 ```

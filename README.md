@@ -114,7 +114,7 @@ python scripts/train_chignolin.py \
 
 We provide a suite of practical utilities built upon the pretrained LiTEN-FF model for downstream molecular simulation tasks, including **geometry optimization**, **molecular dynamics**, and **batch conformer generation**. These scripts are based on [ASE (Atomic Simulation Environment)](https://wiki.fysik.dtu.dk/ase/) and can be easily adapted to custom molecules and workflows.
 
-Reference: https://github.com/lingcon01/LiTEN-FF/tree/master
+For LiTEN-FF, we have made available the `environment.yml` file and the corresponding Conda package ([Zenodo link](https://zenodo.org/records/17475560)), with the source code hosted on https://github.com/lingcon01/LiTEN-FF/tree/master.
 
 ---
 
@@ -129,8 +129,6 @@ Performs energy minimization of molecules using LiTEN-FF as a force field backen
 # You can choose nablaDFT model or SPICE model
 python md_scripts/LiTEN_OPT.py \
     --model_name nablaDFT  \
-    --input_file example/dipe.xyz \
-    --output_file example/dipe_opt.xyz
 ```
 
 **Key Features**:
@@ -151,7 +149,6 @@ Runs molecular dynamics (MD) simulations under NVE, NVT, or Langevin dynamics us
 ```bash
 # The SPICE model is compatible with both periodic solvent systems and vacuum-phase systems, whereas the nablaDFT model is limited to vacuum systems only.
 python md_scripts/LiTEN_MD.py \
-    --input_file example/dipe.xyz \
     --model_name SPICE  \
     --temperature 300 \
     --timestep 1 \
@@ -176,9 +173,7 @@ Generates low-energy conformers for multiple molecules using LiTEN-FF with geome
 
 ```bash
 python md_scripts/LiTEN_Confgen.py \
-    --input_dir example/under_25  \
     --model_name nablaDFT \
-    --output_dir example/Confgen
 ```
 
 **Features**:

@@ -33,21 +33,7 @@ In upcoming versions of LiTEN-FF, we aim to:
 
 You can set up the **LiTEN** environment in one of the following ways.
 
-### 🧠 **Option 1. Create from `liten_env.sh` (Recommended)**
-
-This is the standard and most reproducible way to install all dependencies.
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/lingcon01/LiTEN.git
-cd LiTEN
-
-# 2. Create and activate the conda environment
-bash liten_env.sh
-conda activate liten
-```
-
-### ⚡ **Option 2. Restore from pre-packed environment (`liten_env.tar.gz`)**
+### ⚡ **Option 1. Restore from pre-packed environment (Recommended)**
 
 You can download the pre-packed conda environment from [Zenodo](https://zenodo.org/records/17149388) and restore it manually under your conda environments directory to ensure full reproducibility and consistency across different systems.
 
@@ -67,6 +53,34 @@ tar -xzf /path/to/liten_env.tar.gz
 conda activate ~/miniconda3/envs/liten
 ```
 > 🧩 This method avoids dependency resolution and ensures bitwise reproducibility of the LiTEN environment.
+
+### 🧠 **Option 2. Create from `liten_env.sh`**
+
+This is the standard and most reproducible way to install all dependencies.
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/lingcon01/LiTEN.git
+cd LiTEN
+
+# 2. Create and activate the conda environment
+bash liten_env.sh
+conda activate liten
+```
+
+###  **Option 3. Create from `environment.yml`**
+
+This is the standard and most reproducible way to install all dependencies.
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/lingcon01/LiTEN.git
+cd LiTEN
+
+# 2. Create and activate the conda environment
+conda env create -f environment.yml
+conda activate liten
+```
 
 
 ## 📁 Project Structure

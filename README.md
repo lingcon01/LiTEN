@@ -33,7 +33,7 @@ In upcoming versions of LiTEN-FF, we aim to:
 
 You can set up the **LiTEN** environment in one of the following ways.
 
-### 🧠 **Option 1. Create from `environment.yml` (Recommended)**
+### 🧠 **Option 1. Create from `liten_env.sh` (Recommended)**
 
 This is the standard and most reproducible way to install all dependencies.
 
@@ -43,7 +43,7 @@ git clone https://github.com/lingcon01/LiTEN.git
 cd LiTEN
 
 # 2. Create and activate the conda environment
-conda env create -f environment.yml
+bash liten_env.sh
 conda activate liten
 ```
 
@@ -114,7 +114,7 @@ python scripts/train_chignolin.py \
 
 We provide a suite of practical utilities built upon the pretrained LiTEN-FF model for downstream molecular simulation tasks, including **geometry optimization**, **molecular dynamics**, and **batch conformer generation**. These scripts are based on [ASE (Atomic Simulation Environment)](https://wiki.fysik.dtu.dk/ase/) and can be easily adapted to custom molecules and workflows.
 
-For LiTEN-FF, we have made available the `environment.yml` file and the corresponding Conda package ([Zenodo link](https://zenodo.org/records/17475560)), with the source code hosted on https://github.com/lingcon01/LiTEN-FF/tree/master.
+For LiTEN-FF, we have made the corresponding Conda package ([Zenodo link](https://zenodo.org/records/17475560)), with the source code hosted on https://github.com/lingcon01/LiTEN-FF/tree/master.
 
 ---
 

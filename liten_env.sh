@@ -17,5 +17,6 @@ pip install rdkit
 pip install ase
 pip install pyyaml
 pip install scikit-learn
+pip install easydict
 
 echo "Environment setup complete!"

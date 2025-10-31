@@ -44,6 +44,7 @@ dependencies:
       - aiohappyeyeballs
       - aiohttp
       - aiosignal
+      - easydict
       - ase==3.26.0
       - async-timeout==5.0.1
       - attrs==25.4.0

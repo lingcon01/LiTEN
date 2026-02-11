@@ -1,5 +1,5 @@
 # LiTEN
-![Static Badge](https://img.shields.io/badge/release-v%200.1.2-blue?label=release&color=blue) ![Static Badge](https://img.shields.io/badge/License-MIT%202.0-%23006400)
+![Static Badge](https://img.shields.io/badge/release-v%200.1.2-blue?label=release&color=blue) ![Static Badge](https://img.shields.io/badge/License-MIT%202.0-%23006400) [![DOI](https://zenodo.org/badge/1006324923.svg)](https://doi.org/10.5281/zenodo.18607448)
 
 ## 🌟 About LiTEN
 **LiTEN (Learning Interactions with Tensorized Equivariant Networks)** is a novel equivariant neural network designed for high-precision, efficient 3D molecular property prediction. It introduces the **Tensorized Quadrangle Attention (TQA)** mechanism, which operates directly in Cartesian space, enabling accurate modeling of many-body interactions **without relying on spherical harmonics**, leading to significant computational savings.

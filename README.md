@@ -7,6 +7,8 @@
 We further provide **LiTEN-FF**, a **foundation model for biomolecular force fields**, pretrained and fine-tuned to support a wide range of tasks in both **vacuum and solvated environments**.(https://github.com/lingcon01/LiTEN-FF/tree/master)
 ![workflow](https://github.com/user-attachments/assets/ffc2d515-a0c0-4a5f-ab85-a9edc284f8f9)
 
+## 📢 News
+- **[2026.03]** 🎉 Our paper introducing **LiTEN-FF** has been **accepted for publication in Nature Communications**.
 
 ## 🔬 Applications
 
@@ -233,7 +235,7 @@ If you use **LiTEN** or **LiTEN-FF** in your research or projects, please cite:
 ```
 
 > 📌 The arXiv link will be updated upon public release of the paper.
-> https://arxiv.org/abs/2507.00884
+> https://www.nature.com/articles/s41467-026-70377-4
 ---
 
 ## 👥 Contributors

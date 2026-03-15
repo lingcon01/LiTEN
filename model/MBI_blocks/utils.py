@@ -10,18 +10,9 @@ from typing import Callable, List, Optional, Tuple, Union, Any
 
 
 def get_mask(attn: torch.Tensor, ratio: float = 0.1):
-    """
-    根据 attn 数值，将最小的 `ratio` 部分的值 mask 掉。
 
-    参数:
-        attn (Tensor): [N, 1] 形状的张量
-        ratio (float): 需要 mask 的比例，例如 0.1 代表最小的 10%
-
-    返回:
-        mask (Tensor): [N, 1] 形状的布尔张量，True 表示保留，False 表示被 mask
-    """
-    threshold = torch.quantile(attn, ratio)  # 计算前 ratio% 的分位数
-    mask = attn > threshold  # 只保留大于阈值的部分
+    threshold = torch.quantile(attn, ratio)  
+    mask = attn > threshold
 
     return mask
 
